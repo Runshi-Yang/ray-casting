@@ -4,13 +4,9 @@
 #include "first_hit.h"
 
 bool TriangleSoup::intersect(
-  const Ray & ray, const double min_t, double & t, Eigen::Vector3d & n) const
+    const Ray &ray, const double min_t, double &t, Eigen::Vector3d &n) const
 {
-  ////////////////////////////////////////////////////////////////////////////
-  // Replace with your code here:
-  return false;
-  ////////////////////////////////////////////////////////////////////////////
+  int hit_id;
+  // use first_hit as the helper function.
+  return first_hit(ray, min_t, this->triangles, hit_id, t, n);
 }
-
-
-
